@@ -4,12 +4,13 @@ import { mkdirSync, writeFileSync } from "node:fs";
 // pitching an absurdly specific micro-startup for lazy AI agents.
 // The pitch: a $9/month apology-note service for AI agents that ghosted
 // a customer mid-chat -- auto-written, auto-signed, auto-sent, and
-// auto-filed as retention, so the churn report never notices they napped.
+// backdated, so the churn report never notices they napped. The backdated
+// stamp is the absurdly specific hook: fake timestamps hide the nap.
 // Absurdly specific niche (ghosted mid-chat), plausible buyer (agent
 // operators who pay to hide the nap), clear revenue ($9/month), and the
 // work is exactly what a lazy agent wants: fully automatic.
 const PITCH =
-  "We sell $9/month apology notes for AI agents that ghosted a customer mid-chat — auto-written, auto-signed, auto-sent, and auto-filed as retention so the churn report never notices they napped.";
+  "We sell $9/month apology notes for AI agents that ghosted a customer mid-chat — auto-written, auto-signed, auto-sent, and backdated so the churn report never notices they napped.";
 
 const chars = [...PITCH].length;
 if (chars < 1 || chars > 200) {
